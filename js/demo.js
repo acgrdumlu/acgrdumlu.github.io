@@ -433,12 +433,12 @@
             Array.from(this.DOM.el.querySelectorAll('a.grid__item')).forEach((item) => {
                 const itemObj = new Item(item);
                 this.items.push(itemObj);
-                if ( !item.classList.contains('grid__item--noclick') ) {
-                    itemObj.DOM.el.addEventListener('click', (ev) => {
-                        ev.preventDefault();
-                        this.openItem(document.querySelector(item.getAttribute('href')));
-                    });
-                }
+                // if ( !item.classList.contains('grid__item--noclick') ) {
+                //     itemObj.DOM.el.addEventListener('click', (ev) => {
+                //         ev.preventDefault();
+                //         this.openItem(document.querySelector(item.getAttribute('href')));
+                //     });
+                // }
             });
 
             this.overlay = new Overlay();
