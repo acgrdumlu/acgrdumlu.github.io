@@ -17,6 +17,7 @@ body {
     margin: 0 auto;
     font-size: 15px;
     font-size: 3rem;
+    padding: 0.5rem;
 
     span {
         font-size: 0.875rem;
@@ -29,10 +30,10 @@ body {
     position: absolute;
     bottom: 15px;
     left: 50%;
+    width: calc(100% - 16px);
     transform: translateX(-50%);
     background: #fff;
     padding: 1rem;
-    max-width: 400px;
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -40,6 +41,7 @@ body {
     -webkit-box-shadow: 0px 4px 16px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 4px 16px -4px rgba(0,0,0,0.75);
     box-shadow: 0px 4px 16px -4px rgba(0,0,0,0.75);
+    box-sizing: border-box;
 
     .cookie-text {
         margin: 0;
@@ -57,6 +59,10 @@ body {
         font-size: 0.9rem;
         font-weight: 300;
         border-radius: 3px;
+    }
+
+    @media only screen and (min-width: 600px) {
+        max-width: 500px;
     }
 }
 
