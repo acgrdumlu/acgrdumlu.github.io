@@ -5,7 +5,6 @@ body {
     color: $color-purple;
     background-color: $body-bg;
     margin: 0;
-    font-weight: 500;
     font-size: 18px;
 }
 
@@ -16,7 +15,6 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    height: 100vh;
     font-size: 15px;
     font-size: 3rem;
 
@@ -24,6 +22,41 @@ body {
         font-size: 0.875rem;
         display: block;
         color: #828282;
+    }
+}
+
+.cookie-consent {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 1rem;
+    max-width: 400px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 4px 16px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 16px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 16px -4px rgba(0,0,0,0.75);
+
+    .cookie-text {
+        margin: 0;
+        font-size: 0.875rem;
+        color: #0f182f;
+        margin-right: 1.5rem;
+    }
+
+    .cookie-button {
+        color: #fff;
+        background-color: #0f182f;
+        border: 0;
+        line-height: 30px;
+        padding: 0 20px;
+        font-size: 0.9rem;
+        font-weight: 300;
+        border-radius: 3px;
     }
 }
 

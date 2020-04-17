@@ -243,7 +243,6 @@ body {
   color: #7048E8;
   background-color: #252526;
   margin: 0;
-  font-weight: 500;
   font-size: 18px;
 }
 
@@ -263,7 +262,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
-  height: 100vh;
   font-size: 15px;
   font-size: 3rem;
 }
@@ -272,6 +270,47 @@ body {
   font-size: 0.875rem;
   display: block;
   color: #828282;
+}
+
+.cookie-consent {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #fff;
+  padding: 1rem;
+  max-width: 400px;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0px 4px 16px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 16px -4px rgba(0, 0, 0, 0.75);
+}
+
+.cookie-consent .cookie-text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #0f182f;
+  margin-right: 1.5rem;
+}
+
+.cookie-consent .cookie-button {
+  color: #fff;
+  background-color: #0f182f;
+  border: 0;
+  line-height: 30px;
+  padding: 0 20px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  border-radius: 3px;
 }
 
 .gradient-bottom {
