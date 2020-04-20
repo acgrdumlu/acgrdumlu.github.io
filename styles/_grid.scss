@@ -1,0 +1,17 @@
+@import '_variables';
+
+@mixin breakpoint-down($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpoint-up($break) {
+    @if map-has-key($breakpoints, $break) {
+        @media (max-width: (map-get($breakpoints, $break)) - 1 ) {
+            @content;
+        }
+    }
+}

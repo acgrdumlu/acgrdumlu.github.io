@@ -1,17 +1,23 @@
 //Project Colors
 $color-primary: #888333;
-
 $color-purple: #7048E8;
 
 $gray-1: #f4f7f6;
 $gray-2: #E6EAEA;
-$gray-3: #202121;
+$gray-3: #D4D4D4;
+$gray-4: #202121;
+$gray-5: #202026;
 
 $border-color: $gray-2;
-
 $text-color: $gray-3;
 
-$body-bg: #252526;
+$body-bg: #202026;
+
+$breakpoints: (
+    'sm':   768px,
+    'md':   992px,
+    'lg':   1200px
+) !default;
 
 //Spacing
 $spacer: 1rem;
