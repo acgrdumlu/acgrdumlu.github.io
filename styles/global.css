@@ -1115,11 +1115,6 @@ table {
   padding-bottom: 3rem !important;
 }
 
-#main {
-  position: relative;
-  top: 150px;
-}
-
 .progress_info {
   text-align: center;
   margin-bottom: 20px;
@@ -1173,6 +1168,11 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  padding-top: 100px;
+}
+
+#main .info {
+  z-index: 1;
 }
 
 #main .info h1 {
@@ -1187,6 +1187,17 @@ body {
   line-height: 26px;
   display: block;
   color: #7a7a7a;
+}
+
+#main .info .button-editor {
+  margin-top: 10px;
+  border: 1px solid #7a7a7a;
+  max-width: 110px;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
 }
 
 @media (max-width: 991px) {
@@ -1217,6 +1228,7 @@ body {
   margin: 2rem 0;
   font-family: 'Source Code Pro', monospace;
   font-size: 14px;
+  position: relative;
   /* Editor color pattern */
 }
 

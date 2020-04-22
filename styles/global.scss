@@ -5,9 +5,9 @@
 @import "titan";
 
 body {
-  background-color: $body-bg;
-  margin: 0;
-  font-family: "Rajdhani", sans-serif;
+    background-color: $body-bg;
+    margin: 0;
+    font-family: "Rajdhani", sans-serif;
 }
 
 #main {
@@ -15,8 +15,11 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
+    padding-top: 100px;
 
     .info {
+        z-index: 1;
+
         h1 {
         font-size: 60px;
         color: $gray-3;
@@ -29,6 +32,17 @@ body {
         line-height: 26px;
         display: block;
         color: $gray-8;
+        }
+
+        .button-editor {
+            margin-top: 10px;
+            border: 1px solid $gray-8;
+            max-width: 110px;
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            display: none;
         }
 
         @include breakpoint-up(md) {
@@ -58,6 +72,7 @@ body {
         margin: 2rem 0;
         font-family: 'Source Code Pro', monospace;
         font-size: 14px;
+        position: relative;
 
         &-topbar {
             width: 100%;
