@@ -1215,6 +1215,8 @@ body {
   width: 100%;
   color: #D4D4D4;
   margin: 2rem 0;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
   /* Editor color pattern */
 }
 
@@ -1244,6 +1246,8 @@ body {
 #main .editor-topbar__title {
   line-height: 25px;
   text-align: center;
+  color: #7a7a7a;
+  font-size: 11px;
 }
 
 #main .editor-body {
@@ -1356,6 +1360,11 @@ body {
 
 #main .editor .editor-white {
   color: #D4D4D4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .cookie-consent {

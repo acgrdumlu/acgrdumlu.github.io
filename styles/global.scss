@@ -56,6 +56,8 @@ body {
         width: 100%;
         color: $editor-white;
         margin: 2rem 0;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 14px;
 
         &-topbar {
             width: 100%;
@@ -81,7 +83,8 @@ body {
             &__title {
                 line-height: 25px;
                 text-align: center;
-
+                color: $gray-8;
+                font-size: 11px;
             }
         }
 
@@ -193,6 +196,11 @@ body {
             color: $editor-white;
         }
     }
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .cookie-consent {
