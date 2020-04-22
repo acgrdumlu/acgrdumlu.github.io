@@ -1120,13 +1120,13 @@ table {
   top: 150px;
 }
 
-.info {
+.progress_info {
   text-align: center;
   margin-bottom: 20px;
   color: #D4D4D4;
 }
 
-.info .logo {
+.progress_info .logo {
   width: 110px;
   height: 35px;
   background: url("https://cdn.shopify.com/s/files/1/2360/6457/t/206/assets/logo_secretlab.png?v=14648848223852758726") center center/contain no-repeat;
@@ -1214,6 +1214,7 @@ body {
           flex-direction: column;
   width: 100%;
   color: #D4D4D4;
+  margin: 2rem 0;
   /* Editor color pattern */
 }
 
@@ -1254,6 +1255,24 @@ body {
 
 #main .editor-body__sidebar {
   width: 50px;
+  border-right: 2px solid #20252b;
+}
+
+#main .editor-body__sidebar > div {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .editor-body__sidebar > div.active {
+  border-left: 2px solid;
 }
 
 #main .editor-body__content {
@@ -1266,36 +1285,29 @@ body {
 #main .editor-body__content .line-count {
   position: absolute;
   top: 0;
+  left: 0;
+  z-index: 1;
+  line-height: 20px;
+  padding: 16px 0;
+  text-align: right;
+  color: #7a7a7a;
+  padding-right: 8px;
+  width: 30px;
 }
 
 #main .editor-body__content .console-box {
   overflow: auto;
   counter-reset: codeline;
+  position: relative;
+  padding-top: 16px;
 }
 
 #main .editor-body__content .console-box > li {
   position: relative;
   margin-left: 35px;
-  padding: 1px 10px;
+  padding: 0 10px;
   list-style: none;
-}
-
-#main .editor-body__content .console-box > li:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  content: "";
-  position: absolute;
-  width: 35px;
-  height: 100%;
-  top: 0;
-  left: -35px;
-  padding-top: 1px;
-  padding-right: 8px;
-  text-align: right;
-  background: #2e2e2f;
-  color: #59595b;
-  content: counter(codeline);
-  counter-increment: codeline;
+  line-height: 20px;
 }
 
 #main .editor-body__content .console-box > li:first-child {
@@ -1318,8 +1330,16 @@ body {
   list-style: none;
 }
 
-#main .editor-body__content .console-box > li pre {
-  margin: 0;
+@media (max-width: 991px) {
+  #main .editor-body__sidebar {
+    display: none;
+  }
+  #main .editor-body__content {
+    overflow: hidden;
+  }
+  #main .editor-body__content .console-box > li {
+    white-space: nowrap;
+  }
 }
 
 #main .editor .editor-yellow {

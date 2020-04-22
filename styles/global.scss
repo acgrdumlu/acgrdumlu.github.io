@@ -28,7 +28,7 @@ body {
         font-size: 20px;
         line-height: 26px;
         display: block;
-        color: #7a7a7a;
+        color: $gray-8;
         }
 
         @include breakpoint-up(md) {
@@ -55,6 +55,7 @@ body {
         flex-direction: column;
         width: 100%;
         color: $editor-white;
+        margin: 2rem 0;
 
         &-topbar {
             width: 100%;
@@ -90,6 +91,18 @@ body {
 
             &__sidebar {
                 width: 50px;
+                border-right: 2px solid $gray-7;
+
+                > div {
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &.active {
+                        border-left: 2px solid;
+                    }
+                }
             }
 
             &__content {
@@ -99,36 +112,28 @@ body {
                 .line-count {
                     position: absolute;
                     top: 0;
+                    left: 0;
+                    z-index: 1;
+                    line-height: 20px;
+                    padding: 16px 0;
+                    text-align: right;
+                    color: $gray-8;
+                    padding-right: 8px;
+                    width: 30px;
                 }
 
                 .console-box {
                     overflow: auto;
                     counter-reset: codeline;
+                    position: relative;
+                    padding-top: 16px;
 
                     & > li {
                         position: relative;
                         margin-left: 35px;
-                        padding: 1px 10px;
+                        padding: 0 10px;
                         list-style: none;
-
-                        &:before {
-                            -moz-box-sizing: border-box;
-                            -webkit-box-sizing: border-box;
-                            box-sizing: border-box;
-                            content: "";
-                            position: absolute;
-                            width: 35px;
-                            height: 100%;
-                            top: 0;
-                            left: -35px;
-                            padding-top: 1px;
-                            padding-right: 8px;
-                            text-align: right;
-                            background: #2e2e2f;
-                            color: #59595b;
-                            content: counter(codeline);
-                            counter-increment: codeline;
-                        }
+                        line-height: 20px;
 
                         &:first-child {
                             padding-top: 16px;
@@ -149,13 +154,25 @@ body {
                                 list-style: none;
                             }
                         }
-
-                        pre {
-                            margin: 0;
-                        }
                     }
                 }
                 
+            }
+
+            @include breakpoint-up(md) {
+                &__sidebar {
+                    display: none;
+                }
+
+                &__content {
+                    overflow: hidden;
+
+                    .console-box {
+                        & > li {
+                            white-space: nowrap;
+                        }
+                    }
+                }
             }
         }
 

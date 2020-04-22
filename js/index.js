@@ -14,3 +14,16 @@ var cookies = document.cookie
 if(cookies.cookieConsent === 'accepted') {
     document.querySelector('.cookie-consent').style.display = 'none';
 }
+
+// Line Count 
+
+var consoleHeight = document.querySelector('.console-box').offsetHeight;
+
+function lineCount() {
+    var consoleLine = consoleHeight / 20;
+    for (i = 1; i < consoleLine - 1; i++) {
+        document.querySelector('.line-count').insertAdjacentHTML('beforeend', '<ul>' + i + '</ul>'); 
+    }
+}
+
+lineCount();
