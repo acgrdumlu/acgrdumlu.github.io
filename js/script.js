@@ -27,3 +27,19 @@ function lineCount() {
 }
 
 lineCount();
+
+// Editor Animation
+// var windowHeight = window.innerHeight;
+// document.querySelector('.info').style.transform = "translateY(" + windowHeight / 3 + "px)";
+
+
+// document.querySelector('.button-editor').addEventListener('click', function(){
+//     this.classList.toggle('open');
+//     document.querySelector('.editor').classList.toggle('fade-in');
+//     document.querySelector('.editor').style.transform = "translateY(" + windowHeight / 10 + "px)";
+//     document.querySelector('.info').style.transform = "translateY(" + windowHeight / 6 + "px)";
+// })
+
+// document.querySelector('.close').addEventListener('click', function(){
+//     document.querySelector('.editor').classList.toggle('fade-in');
+// })

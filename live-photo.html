@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aydın Çağrı Dumlu - Live Photo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="MrrPegiyUszuoszyMLqLCcOSofI-bGFNwKhy0XduzEk" />
+<link rel="stylesheet" href="/styles/global.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script rel="stylesheet" src="js/livephoto.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="info">
+            <h1>Live Photo</h1>
+            <span>Here is the plugin that you can make fun animation with your burst photos.</span>
+        </div>
+        <div class="wrapper">
+            <div class="live-photo"
+                style="background: url('https://storage.googleapis.com/media.msmode.com/spriteTest4.jpg') 0px 0px / cover no-repeat;"
+                data-animation-rate-desktop="50" data-animation-rate-mobile="200"
+                data-stripe-image="https://storage.googleapis.com/media.msmode.com/spriteTest4.jpg" data-image-count="20">
+                <img src="https://storage.googleapis.com/media.msmode.com/Test_Jeans_video/LYD-Iris-Stone-0903.jpg">
+            </div>
+            <div class="live-photo"
+                style="background: url('https://storage.googleapis.com/media.msmode.com/spriteTest4.jpg') 0px 0px / cover no-repeat;"
+                data-animation-rate-desktop="50" data-animation-rate-mobile="200"
+                data-stripe-image="https://storage.googleapis.com/media.msmode.com/spriteTest4.jpg" data-image-count="20">
+                <img src="https://storage.googleapis.com/media.msmode.com/Test_Jeans_video/LYD-Iris-Stone-0903.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="gradient-bottom"></div>
+    <script>
+        $('.live-photo').each(function () {
+            $(this).livePhoto({
+                allsteps: $(this).data('image-count'),
+                animationrate: $(this).data('animation-rate-desktop'),
+                target: $(this).data('animation-rate-mobile')
+            });
+        });
+    </script>
+</body>
+
+</html>

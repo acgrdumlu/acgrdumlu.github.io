@@ -1,0 +1,22 @@
+@import '_variables';
+
+.wrapper {
+    display: flex;
+    margin: 0 -1rem;
+
+    .live-photo {
+        flex: 1;
+        margin: 1rem;
+    
+        img {
+            max-width: 100%;
+            opacity: 0;
+        }
+    }
+
+    @include breakpoint-up (sm){
+        flex-direction: column;
+    }
+}
+
+

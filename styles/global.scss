@@ -1,8 +1,9 @@
-@import "_variables";
-@import "_grid";
+@import "variables";
+@import "grid";
 @import "utilities/normalize";
 @import "utilities/reset";
 @import "titan";
+@import "livephoto";
 
 body {
     background-color: $body-bg;
