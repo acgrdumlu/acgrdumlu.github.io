@@ -80,6 +80,8 @@ body {
             height: 25px;
             background-color: $gray-7;
             position: relative;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
 
             &__buttons {
                 position: absolute;
@@ -107,6 +109,9 @@ body {
         &-body {
         display: flex;
         background-color: $gray-6;
+        border-radius: 5px 0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
 
             &__sidebar {
                 width: 50px;

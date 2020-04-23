@@ -7,6 +7,8 @@
     .live-photo {
         flex: 1;
         margin: 1rem;
+        filter: grayscale(100%);
+        @include shadow;
     
         img {
             max-width: 100%;
